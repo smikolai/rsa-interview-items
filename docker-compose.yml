@@ -1,0 +1,12 @@
+services:
+  notebook:
+    build: .
+    ports:
+      - "8888:8888"   # Jupyter Lab  → http://localhost:8888
+      - "4040:4040"   # Spark App UI → http://localhost:4040
+    volumes:
+      - ./notebooks:/work
+    command: >
+      jupyter lab --ip=0.0.0.0 --no-browser --allow-root
+      --ServerApp.token='' --ServerApp.password=''
+      --notebook-dir=/work

@@ -1,0 +1,7 @@
+.venv
+.ipynb_checkpoints
+notebooks/.ipynb_checkpoints
+notebooks/spark-warehouse
+notebooks/metastore_db
+notebooks/derby.log
+__pycache__
